@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chart</title>
+	<script type="text/javascript" src="https://www.bullionvault.com/chart/bullionvaultchart.js?v=1"></script>
+	<style type="text/css">
+		#embed image{
+			display: none;
+		}
+
+		#embed tspan[dx='3']{
+			display: none;
+		}
+
+		#embed tspan[x='1239']{
+			display: none;
+		}
+
+		.bullionvaultchart #jschart_timestamp a:link, .bullionvaultchart #jschart_timestamp a:visited{
+			display: none !important;
+		}
+
+		.bullionvaultchart #jschart_creditLogo{
+			display: none !important;
+		}
+
+		body{
+			background-color: #020b1e;
+		}
+	</style>
+</head>
+<body>
+	<div id="embed"></div>
+
+	<script type="text/javascript" >
+		var options = {
+			bullion: 'gold',
+			currency: 'USD',
+			timeframe: '1w',
+			chartType: 'line',
+			miniChartModeAxis : 'oz',
+			containerDefinedSize: false,
+			miniChartMode: false,
+			displayLatestPriceLine: true,
+			switchBullion: true,
+			switchCurrency: true,
+			switchTimeframe: true,
+			switchChartType: true,
+			exportButton: true
+		};
+		var chartBV = new BullionVaultChart(options, 'embed');
+	</script>
+</body>
+</html>
